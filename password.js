@@ -1,5 +1,5 @@
 function othername() {
-    var pass1 = 3;
+    var pass1 = 3174;
     var input = document.getElementById("userInput").value;
 
     if (input == pass1) {
