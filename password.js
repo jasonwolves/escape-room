@@ -1,7 +1,8 @@
-var pass1 = 1;
-var input = document.getElementById("userInput").value;
-alert(input);
+function othername() {
+    var pass1 = 3;
+    var input = document.getElementById("userInput").value;
 
-if (input == pass1) {
-  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    if (input == pass1) {
+        document.getElementById("hidden_clue").textContent = "Hello JavaScript!";
+    }
 }
