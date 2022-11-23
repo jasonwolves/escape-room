@@ -1,14 +1,19 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>Login page</title>
 </head>
     
     <style>
+    body {
+    text-align: center;
+    }
+    
 .container { 
-  height: 400px;
-  position: relative;
-  border: 6px solid DarkBlue; 
+  height: 500px;
+  width : 500px;
+  position: absolute;
+  border: 8px solid Blue; 
 }
 
 .center {
@@ -16,13 +21,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
+  -ms-tran1sform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
  p {text-align: center;
+ 	color: Blue;
+    font-size: 2.00em;
         } 
- 
+  
+  label {
+      font-size: 3.00em;
+                color: DarkBlue;
+		text-shadow: 2px 2px LightBlue, 3px 3px 15px white;
+        }
         
         
     </style>
@@ -31,10 +43,16 @@
 <body>
     <p> Welcome to the GSBC Escape Room. If you think you know the code, try your luck. The <u>Password</u> is obvious to those who are attentive! </p>
     
-    <div class="container">
-  <div class="center">
+   
 <form>
-    <label for="pswd">Enter your password: </label>
+ 
+     <div class="container">
+     <br>
+     <br>
+     <br>
+       <label for="pswd">Enter your password: </label>
+       
+  <div class="center">
     <input type="password" id="pswd" autocomplete="off">
     <input type="button" value="Submit" onclick="checkPswd();" />
 </form>
