@@ -4,11 +4,38 @@
     <link rel="stylesheet" type="text/css" href="index_style.css">
     <title>Login page</title>
 </head>
+<script type="text/javascript">
+    var login_attempts=3;
+    function checkPswd() {
+        var confirmPassword = "Password";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="correct.html";
+        }
+        else{
+            if(login_attempts==0)
+                {
+                alert("No Login Attempts Available");
+                 }
+        else{
+            login_attempts=login_attempts-1;
+   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
+   if(login_attempts==0)
+   {
+    document.getElementById("pass").disabled=true;
+    document.getElementById("login").disabled=true;
+   }
+  }
+ }
+ 
+ return false;
+}	
+</script>
 <body>
     <p> Welcome to the GSBC Escape Room. If you think you know the code, try your luck. The <u>Password</u> is obvious to those who are attentive! </p>
     
    
-<form>
+<form id="login">
  
      <br>
      <br>
@@ -17,23 +44,12 @@
 	   <label for="pswd">Enter your password: </label>
 	  <br>
     <input type="password" id="pswd" autocomplete="off">
-    <input type="button" value="Submit" onclick="checkPswd();" />
+    <input type="submit" value="Submit" onclick="checkPswd();" />
 </form>
 	<br>
 	<br>
 	<p> Click on submit and see if you are Right!
 
-<script type="text/javascript">
-    function checkPswd() {
-        var confirmPassword = "Password";
-        var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
-             window.location="correct.html";
-        }
-        else{
-            alert("Passwords do not match.");
-        }
-    }
-</script>
+
 </body>
 </html>
