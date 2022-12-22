@@ -15,11 +15,11 @@
         else{
             if(login_attempts==0)
                 {
-                alert("No Login Attempts Available");
+                alert("No Login Attempts Available, disabled for 60 seconds");
                  }
         else{
             login_attempts=login_attempts-1;
-   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available, disabled for 60 seconds");
+   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
    if(login_attempts==0)
    {
     document.getElementById("pswd").disabled=true;
