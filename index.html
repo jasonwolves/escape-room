@@ -19,7 +19,7 @@
                  }
         else{
             login_attempts=login_attempts-1;
-   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
+   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available, disabled for 60 seconds");
    if(login_attempts==0)
    {
     document.getElementById("pswd").disabled=true;
