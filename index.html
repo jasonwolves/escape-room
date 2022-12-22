@@ -60,19 +60,14 @@ input {
 	   <label for="pswd">Enter your password: </label>
 	  <br>
     <input type="password" id="pswd" autocomplete="off">
-    <input id="submit" type="button" value="Submit" onclick="checkPswd();" />
+    <input type="button" value="Submit" onclick="checkPswd();" />
 </form>
 	<br>
 	<br>
 	<p> Click on submit and see if you are Right!
 
 <script type="text/javascript">
-    $("#pass").keypress(function(event) {
-    if (event.keyCode === 13) {
-        $("#submit").click();
-        }
-    });
-        
+
     function checkPswd() {
         var confirmPassword = "Password";
         var password = document.getElementById("pswd").value;
@@ -82,6 +77,9 @@ input {
         else{
             alert("Passwords do not match.");
         }
+    }
+    function detect_enter() {
+        if (event.keyCode == 13) {checkPswd}
     }
 
 </script>
