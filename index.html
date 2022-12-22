@@ -1,50 +1,10 @@
  <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="login_style.css">
     <title>Login page</title>
 </head>
     
-    <style>
-    body {
-    text-align: center;
-background-image: url("Escape Room.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
-   
-    
-input {
-      font-size: 3.00em;
-                color: DarkBlue;
-		text-align: center;	
-		
-        }
-     
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-tran1sform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
- p {text-align: center;
- 	color:Green;
-		text-shadow: 2px 2px Black, 5px 5px 10px black;
-    font-size: 2.50em;
-        } 
-  
-  label {
-      font-size: 4.00em;
-                color: Blue;
-		text-shadow: 4px 3px Black, 5px 5px 10px black;
-        }
-        
-       
-	    
-    </style>
 
 
 <body>
@@ -67,14 +27,26 @@ input {
 	<p> Click on submit and see if you are Right!
 
 <script type="text/javascript">
+    var login_attempts=3;
     function checkPswd() {
         var confirmPassword = "Password";
         var password = document.getElementById("pswd").value;
         if (password == confirmPassword) {
-             window.location="login.php";
+             window.location="correct.html";
         }
         else{
-            alert("Passwords do not match.");
+            if(login_attempts==0)
+            {
+            alert("No Login Attempts Available");
+            }
+            login_attempts=login_attempts-1;
+   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
+   if(login_attempts==0)
+   {
+    document.getElementById("name").disabled=true;
+    document.getElementById("pass").disabled=true;
+    document.getElementById("form1").disabled=true;
+   } 
         }
     }
 </script>
