@@ -43,8 +43,8 @@
   <div class="center">
 	   <label for="pswd">Enter your password: </label>
 	  <br>
-    <input type="password" id="pswd" autocomplete="off">
-    <input type="button" value="Submit" onclick="checkPswd();" />
+    <input type="password" id="pswd" autocomplete="off" onkeydown="if (event.keyCode == 13) document.getElementById('btn').click>
+    <input type="button" id="btn" value="Submit" onclick="checkPswd();" />
 </form>
 	<br>
 	<br>
