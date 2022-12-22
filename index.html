@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="index_style.css">
@@ -16,7 +16,10 @@
             if(login_attempts==0)
                 {
                 alert("No Login Attempts Available");
-                 }
+                setTimeout(function(){
+                    var element = getElementById("btn")[0];
+                    element.disabled = true;}, 60000);
+                }
         else{
             login_attempts=login_attempts-1;
    alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
