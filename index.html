@@ -60,26 +60,24 @@ input {
 	   <label for="pswd">Enter your password: </label>
 	  <br>
     <input type="password" id="pswd" autocomplete="off">
-    <input type="button" value="Submit" id="btn" onclick="checkPswd();" />
+    <input type="button" value="Submit" onclick="checkPswd();" />
 </form>
 	<br>
 	<br>
 	<p> Click on submit and see if you are Right!
 
 <script type="text/javascript">
- var input = document.getElementById("pswd");
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("btn").click();
-    }
-});
+ 
     function checkPswd() {
         var confirmPassword = "Password";
         var password = document.getElementById("pswd").value;
+        pswd.onkeyup = function (e) {
+   if (e.which == 13) checkPswd();
+}
         if (password == confirmPassword) {
              window.location="correct.html";
         }
+        
         else{
             alert("Passwords do not match.");
         }
