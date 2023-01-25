@@ -36,5 +36,7 @@ label {
   font-size: 2.00em;
             color: Blue;
     text-shadow: 3px 2px Black, 4px 4px 8px black;
+    top: 70%;
+    left: 50%;
     }
     
