@@ -5,6 +5,7 @@ background-image: url("NVBC.jpeg");
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: contain;
+background-position: center;
 }
 
 input {
