@@ -4,7 +4,7 @@ text-align: center;
 background-image: url("NVBC.jpeg");
 background-repeat: no-repeat;
 background-attachment: relative;
-background-size: cover;
+background-size: fixed;
 }
 
 input {
@@ -16,7 +16,7 @@ input {
  
 .center {
 margin: 0;
-position: relative;
+position: fixed;
 top: 50%;
 left: 50%;
 -ms-tran1sform: translate(-50%, -50%);
