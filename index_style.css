@@ -18,7 +18,7 @@ input {
  
 .center {
 margin: 0;
-position: fixed;
+position: relative;
 top: 50%;
 left: 50%;
 -ms-tran1sform: translate(-50%, -50%);
