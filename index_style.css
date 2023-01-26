@@ -1,10 +1,10 @@
 
 body {
 text-align: center;
-background-image: url("NVBC.jpeg");
-background-repeat: repeat-y;
+background-image: url("Classroom.png");
+background-repeat: no-repeat;
 background-attachment: relative;
-background-size: contain;
+background-size: cover;
 background-position: center;
 }
 
