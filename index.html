@@ -17,7 +17,7 @@
         else{
             if(login_attempts==0)
                 {
-                alert("You need to go back to school, please wait 60 seconds to try again");
+                alert("You need to go back to school, please wait 90 seconds to try again");
                  }
         else{
             login_attempts=login_attempts-1;
@@ -25,9 +25,9 @@
    if(login_attempts==0)
    {
     document.getElementById("pswd").disabled=true;
-    setTimeout(function(){document.getElementById("pswd").disabled = false;},60000);
+    setTimeout(function(){document.getElementById("pswd").disabled = false;},90000);
     document.getElementById("login").disabled=true;
-    setTimeout(function(){document.getElementById("login").disabled = false;},60000);
+    setTimeout(function(){document.getElementById("login").disabled = false;},90000);
     setTimeout(function(){window.location.reload();},60000);
     
     
