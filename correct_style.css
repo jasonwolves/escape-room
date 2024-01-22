@@ -1,5 +1,4 @@
-
-body {
+<body>
 text-align: center; 
 background-image: url("NVBC.jpg");
 background-attachment: fixed;
@@ -12,4 +11,5 @@ background-position: center;
   .modal-content {
     width: 100%;
   }
-}
+</body>
+
