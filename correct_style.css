@@ -2,9 +2,10 @@ body {
 text-align: center; 
 background-image: url("NVBC.jpeg");
 background-attachment: fixed;
-background-repeat: repeat-y;
-background-size: cover;
 background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
 }
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
