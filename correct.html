@@ -10,6 +10,41 @@
     
    
 <body>
+	<script type="text/javascript">
+    var login_attempts=3;
+    function checkPswd() {
+        var confirmPassword = "moyerapusenevertsonoxendineshiltonsimmons";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="correct.html";
+        }
+        else{
+            if(login_attempts==0)
+                {
+                alert("You need to go back to school, please wait 90 seconds to try again");
+                 }
+        else{
+            login_attempts=login_attempts-1;
+   alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
+   if(login_attempts==0)
+   {
+    document.getElementById("pswd").disabled=true;
+    setTimeout(function(){document.getElementById("pswd").disabled = false;},90000);
+    document.getElementById("login").disabled=true;
+    setTimeout(function(){document.getElementById("login").disabled = false;},90000);
+    setTimeout(function(){window.location.reload();},60000);
+    
+    
+
+   }
+  }
+ }
+ 
+ return false;
+}	
+</script>
+
+	
 	<br>
 	<br>
     <br>
